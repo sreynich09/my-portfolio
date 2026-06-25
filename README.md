@@ -11,6 +11,16 @@ A personal portfolio website made with Vue 3, Vue Router, and Tailwind CSS.
 - **404** — a custom page for wrong links
 - A nav bar that works on mobile and shows the active page
 
+## Screenshots
+
+| Home | About |
+| --- | --- |
+| ![Home page](./screenshots/home.png) | ![About page](./screenshots/about.png) |
+
+| Projects | Contact |
+| --- | --- |
+| ![Projects page](./screenshots/projects.png) | ![Contact page](./screenshots/contact.png) |
+
 ## Tech Stack
 
 - [Vue 3](https://vuejs.org/)
