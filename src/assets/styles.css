@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+/* Let `dark:` utilities respond to a `.dark` class on <html> instead of OS preference */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #cbd5e1;
+}
+
+.dark {
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-border: #334155;
+}
+
+/* Add a keyframe animation */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-fade-in {
+  animation: fade-in 0.5s ease both;
+}
+
+/* Route change transition */
+.route-fade-enter-active,
+.route-fade-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.route-fade-enter-from,
+.route-fade-leave-to {
+  opacity: 0;
+  transform: translateY(8px);
+}
+

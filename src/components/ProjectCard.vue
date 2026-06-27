@@ -25,21 +25,36 @@ export default {
 
 <style scoped>
 .project-card {
-  background: white;
+  background: var(--color-surface);
+  color: var(--color-text);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card h3 {
+  color: var(--color-text);
+}
+
+.project-card p {
+  color: var(--color-text-muted);
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .project-icon {
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+  transform: scale(1.15) rotate(-5deg);
 }
 
 .tech-tags {

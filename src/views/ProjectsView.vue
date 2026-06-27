@@ -59,14 +59,14 @@ export default {
 
 h1 {
   text-align: center;
-  color: #2c3e50;
+  color: var(--color-text);
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
   text-align: center;
-  color: #666;
+  color: var(--color-text-muted);
   font-size: 1.25rem;
   margin-bottom: 3rem;
 }

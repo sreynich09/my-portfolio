@@ -34,12 +34,12 @@ export default {
 
 .error-content h2 {
   font-size: 2rem;
-  color: #2c3e50;
+  color: var(--color-text);
   margin: 1rem 0;
 }
 
 .error-content p {
-  color: #666;
+  color: var(--color-text-muted);
   margin-bottom: 2rem;
 }
 
