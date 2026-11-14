@@ -35,7 +35,7 @@ export default {
           id: 1,
           title: 'User Directory App',
           emoji: '👥',
-          image: `${import.meta.env.BASE_URL}projects/user-directory.png`,
+          image: `${import.meta.env.BASE_URL}images/user-directory.png`,
           description:
             'Browse and manage user profiles with search, filters, dynamic profile pages, profile editing, and shareable filtered URLs.',
           technologies: ['Vue 3', 'Vue Router 4', 'Vite', 'Tailwind CSS'],
