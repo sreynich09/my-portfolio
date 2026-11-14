@@ -47,9 +47,16 @@ export default {
         </span>
       </div>
       <div
-        v-if="project.github || project.demo"
-        class="mt-5 flex gap-3 border-t border-slate-100 pt-4 dark:border-slate-800"
+        v-if="project.link || project.github || project.demo"
+        class="mt-5 flex items-center gap-4 border-t border-slate-100 pt-4 dark:border-slate-800"
       >
+        <RouterLink
+          v-if="project.link"
+          :to="project.link"
+          class="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 px-3.5 py-1.5 text-sm font-semibold text-white shadow-md shadow-indigo-500/25 transition hover:-translate-y-0.5"
+        >
+          View →
+        </RouterLink>
         <a
           v-if="project.github"
           :href="project.github"

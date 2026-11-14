@@ -1,5 +1,9 @@
 # My Portfolio
 
+🌐 **Live site:** https://sreynich09.github.io/my-portfolio/
+
+📦 **Hosting guide:** [How to host this site on GitHub Pages](https://sreynich09.github.io/my-portfolio/guide)
+
 A personal portfolio website made with Vue 3, Vue Router, and Tailwind CSS.
 
 ## Features

@@ -14,7 +14,7 @@
       </p>
     </div>
 
-    <div class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
   </section>
@@ -49,6 +49,16 @@ export default {
             'A REST API for a blog with JWT authentication, role-based access (user, editor, admin), owner-or-admin rules for posts and comments, and admin-only user management.',
           technologies: ['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT', 'bcryptjs'],
           github: 'https://github.com/sreynich09/authorization-routes',
+        },
+        {
+          id: 3,
+          title: 'GitHub Pages Hosting Guide',
+          emoji: '🚀',
+          description:
+            'A step-by-step guide to deploying a Vue + Vite site to GitHub Pages with GitHub Actions — the same setup this portfolio uses.',
+          technologies: ['GitHub Actions', 'GitHub Pages', 'Vite', 'Vue Router'],
+          link: '/guide',
+          github: 'https://github.com/sreynich09/my-portfolio',
         },
       ],
     }
