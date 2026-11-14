@@ -7,6 +7,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages serves the site from https://sreynich09.github.io/my-portfolio/
+  base: process.env.GITHUB_ACTIONS ? '/my-portfolio/' : '/',
   plugins: [
     vue(),
     vueDevTools(),

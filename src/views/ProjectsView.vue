@@ -1,15 +1,23 @@
 <template>
-  <div class="projects-page">
-    <h1>My Projects</h1>
-    <p class="subtitle">Here are some projects I've built</p>
-    
-    <div class="projects-grid">
-      <ProjectCard 
-        v-for="project in projects" 
-        :key="project.id"
-        :project="project" />
+  <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+    <div class="mb-14 text-center">
+      <p
+        class="mb-2 text-sm font-semibold tracking-widest text-indigo-600 uppercase dark:text-indigo-400"
+      >
+        Portfolio
+      </p>
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
+        My <span class="text-gradient">Projects</span>
+      </h1>
+      <p class="mx-auto max-w-xl text-lg text-slate-500 dark:text-slate-400">
+        Here are some projects I've built
+      </p>
     </div>
-  </div>
+
+    <div class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+      <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+    </div>
+  </section>
 </template>
 
 <script>
@@ -18,62 +26,32 @@ import ProjectCard from '@/components/ProjectCard.vue'
 export default {
   name: 'ProjectsView',
   components: {
-    ProjectCard
+    ProjectCard,
   },
   data() {
     return {
       projects: [
         {
           id: 1,
-          title: 'Todo App',
-          emoji: '✅',
-          description: 'A task management app with localStorage persistence',
-          technologies: ['Vue.js', 'Tailwind CSS', 'localStorage']
+          title: 'User Directory App',
+          emoji: '👥',
+          image: `${import.meta.env.BASE_URL}projects/user-directory.png`,
+          description:
+            'Browse and manage user profiles with search, filters, dynamic profile pages, profile editing, and shareable filtered URLs.',
+          technologies: ['Vue 3', 'Vue Router 4', 'Vite', 'Tailwind CSS'],
+          github: 'https://github.com/sreynich09/user-directory-app',
         },
         {
           id: 2,
-          title: 'Movie Review App',
-          emoji: '🎬',
-          description: 'Rate and review your favorite movies',
-          technologies: ['Vue.js', 'Components', 'Props & Events']
+          title: 'Blog API Authorization',
+          emoji: '🔐',
+          description:
+            'A REST API for a blog with JWT authentication, role-based access (user, editor, admin), owner-or-admin rules for posts and comments, and admin-only user management.',
+          technologies: ['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT', 'bcryptjs'],
+          github: 'https://github.com/sreynich09/authorization-routes',
         },
-        {
-          id: 3,
-          title: 'Recipe Manager',
-          emoji: '🍳',
-          description: 'Manage and organize your favorite recipes',
-          technologies: ['Vue.js', 'Lifecycle Hooks', 'Computed Properties']
-        }
-      ]
+      ],
     }
-  }
+  },
 }
 </script>
-
-<style scoped>
-.projects-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
-}
-
-h1 {
-  text-align: center;
-  color: var(--color-text);
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.subtitle {
-  text-align: center;
-  color: var(--color-text-muted);
-  font-size: 1.25rem;
-  margin-bottom: 3rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-</style>
